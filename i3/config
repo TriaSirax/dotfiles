@@ -43,12 +43,12 @@ set $Mod Mod4
 #set $Mod Mod1
 
 # direction keys
-set $up l
-set $down k
-set $left j
-set $right semicolon
+set $up k
+set $down j
+set $left g
+set $right l
 
-set $WS1 "1:"
+set $WS1 "1:"
 set $WS2 "2:"
 set $WS3 "3:"
 set $WS4 "4:"
@@ -58,8 +58,8 @@ set $WS7 "7"
 set $WS8 "8:"
 
 # monitors
-set $Mon1 HDMI1
-set $Mon2 HDMI2
+#set $Mon1 HDMI1
+#set $Mon2 HDMI2
 
 #####################################################
 ###############     Autostart      ##################
@@ -98,7 +98,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $Mod+x exec --no-startup-id rofr.sh -l
 
 #Screenshot
-bindsym $mod+Shift+p exec scrot ~/Resimler/%Y-%m-%d-%T-screenshot.png
+bindsym $mod+Shift+p exec --no-startup-id scrot ~/Resimler/%Y-%m-%d-%T-screenshot.png
 
 # audio
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
@@ -277,11 +277,11 @@ bindsym $Mod+Control+Shift+minus gaps outer all minus 5
 
 for_window [class="(?i)(?:qt5ct|pinentry)"] floating enable, focus
 for_window [class="(?i)(?:termite|thunar)"] focus
-for_window [class="(?i)(?:geany|firefox)"] focus
+for_window [class="(?i)(?:geany|firefox|chromium)"] focus
 
 # Assign Applications to specific workspace
 # get class with xprop
-assign [class="Firefox"] $ws1
+assign [class="Chromium"] $ws1
 assign [class="Termite"] $ws2
 assign [class="Thunar"] $ws3
 assign [class="Geany"] $ws4
@@ -295,15 +295,13 @@ for_window [window_role="(?i)(?:pop-up|setup)"] floating enable
 # set trayer to be borderless
 for_window [class="(?i)trayer"] border pixel 0
 
-
-#Firefox keybinding
-bindsym $mod+Shift+f exec firefox
-
 #Thunar keybinding
 bindsym $mod+Shift+t exec thunar
+
+#Chromium keybinding
+bindsym $mod+b exec chromium
 
 #Specific properties for spec window
 #for_window [class="Thunar"] floating enable
 #for_window [class="qBittorrent"] floating enable
-for_window [class="Firefox"] border pixel 0
-
+for_window [class="Chromium"] border pixel 0
