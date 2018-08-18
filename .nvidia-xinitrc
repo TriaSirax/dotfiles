@@ -1,0 +1,9 @@
+xrandr --newmode "ultrawide60" 230.76  2560 2728 3000 3440  1080 1081 1084 1118  -HSync +Vsync
+xrandr --addmode HDMI-1-2 "ultrawide60"
+systemctl --user import-environment DISPLAY
+if [ $# -gt 0 ]; then
+    $*
+else
+    exec i3
+fi
+

@@ -1,0 +1,39 @@
+Xft.dpi: 111
+!111
+!96
+
+! Rofi
+rofi.font: Ubuntu Mono 12
+rofi.padding: 20
+rofi.line-padding: 2
+rofi.color-enabled: true
+rofi.hide-scrollbar: true
+rofi.separator-style: solid
+rofi.color-window: #EFF1F5, #2b303b, #EFF1F5
+rofi.color-normal: #EFF1F5, #2b303b, #EFF1F5, #8fa1b3, #2b303b
+
+! Rxvt-Unicode
+!*background: #1d2021
+URxvt*depth: 32
+URxvt*background: [90]#141416
+URxvt*scrollBar: false
+URxvt*font: xft:xos4 Terminus:size=11,\
+         xft:Ubuntu Mono
+URxvt*boldFont: xft:xos4 Terminus:style:bold
+*foreground: #ebdbb2
+*color0:  #282828
+*color8:  #928374
+*color1:  #cc241d
+*color9:  #fb4934
+*color2:  #98971a
+*color10: #b8bb26
+*color3:  #d79921
+*color11: #fabd2f
+*color4:  #458588
+*color12: #83a598
+*color5:  #b16286
+*color13: #d3869b
+*color6:  #689d6a
+*color14: #8ec07c
+*color7:  #a89984
+*color15: #ebdbb2
