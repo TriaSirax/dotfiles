@@ -28,9 +28,9 @@ set $right l
 
 set $WS1 "1:"
 set $WS2 "2:"
-set $WS3 "3:"
-set $WS4 "4:"
-set $WS5 "5:"
+set $WS3 "3:"
+set $WS4 "4:"
+set $WS5 "5"
 set $WS6 "6"
 set $WS7 "7"
 set $WS8 "8:"
@@ -75,6 +75,9 @@ bindsym $Mod+x exec --no-startup-id rofr.sh -l
 
 #Screenshot
 bindsym $mod+Shift+p exec --no-startup-id scrot ~/Resimler/Screenshots/%Y-%m-%d-%T-screenshot.png
+
+# ranger
+bindsym $mod+Shift+f exec --no-startup-id urxvt -e ranger
 
 # audio
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
@@ -254,17 +257,17 @@ bindsym $Mod+Control+Shift+minus gaps outer all minus 5
 ###################################################
 
 for_window [class="(?i)(?:qt5ct|pinentry)"] floating enable, focus
-for_window [class="(?i)(?:termite)"] focus
+for_window [class="(?i)(?:URxvt)"] focus
 for_window [class="(?i)(?:geany|chromium)"] focus
 
 # Assign Applications to specific workspace
 # get class with xprop
 assign [class="Chromium"] $ws1
-assign [class="Termite"] $ws2
-
+assign [class="URxvt"] $ws2
+assign [class="Eclipse"] $ws3
 assign [class="Geany"] $ws4
-assign [class="Eclipse"] $ws5
 assign [class="qBittorrent"] $ws8
+assign [class="hakuneko-desktop"] $ws8
 assign [class="Steam"] $ws9
 assign [class="discord"] $ws0
 
